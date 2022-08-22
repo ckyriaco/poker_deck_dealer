@@ -12,5 +12,13 @@ A C++ program that shuffles and deals poker cards.
 
 # What the program does?
 - Creates a deck of cards if requested and then deals up to 52 cards until the user requests for the program to stop executing. 
-- 
+
+# How to compile and execute if you are new to g++?
+## Executing poker executable
+- Simply navigate to the folder and type ./poker and it will execute
+
+## Comile and execute a new executable built on poker.cpp
+- First: Ensure that GNU's g++ capable compiler is installed
+- Second: Type command g++ poker.cpp -o nameOfExecutable
+- Lastly: Type ./nameOfExecutable
 
