@@ -448,8 +448,10 @@ void askForCard(){
 		}
 		count = de.getDealCounter();
 		cout << "\nThe current count is "<<count;
-		cout << "\nEnter any key (except for just enter) to shuffle the deck deal a card and N to exit the program: ";
-		cin >> deal;
+		if(count != max){
+			cout << "\nEnter any key (except for just enter) to shuffle the deck deal a card and N to exit the program: ";
+			cin >> deal;
+		}
 	}
 	cout<<"All cards have been dealt... Goodbye!!!";
 }
