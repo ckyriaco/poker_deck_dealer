@@ -99,9 +99,9 @@ class doublyLinkedList{
 		//delete the head of the doubly linked list
 
 		node* returnHead(){
-			cout<<"doublylinkedlist returning head\n";
+			
 			node* temp = head;
-			cout<<"doublylinkedlist deleting begining\n";
+			
 			deletbegin();
 			return temp;
 		}
@@ -134,6 +134,7 @@ class doublyLinkedList{
 		}
 
 		//delete a node at a specific postion in the doubly linked list
+
 		void deletatpos(int n){
 			if(n < 0 || n > (i - 1)){
 				throw std::invalid_argument("The index must be positive and not greater than the number of nodes");
@@ -166,8 +167,7 @@ class doublyLinkedList{
 			srand(time(0));
 			for(int n = 0; n < i-1; n++){
 				if(i > 1){
-					cout<<"This is n: "<<n<<"\n";
-					cout<<"This is i: "<<i<<"\n";
+					
 					int p; 
 					node* y;
 					if(n == 0){
@@ -178,7 +178,7 @@ class doublyLinkedList{
 						}else{
 							p = 0 + (rand() % (i-1));
 						}
-						cout<<"This is p: "<<p<<"\n";
+						
 						insertatpos(p, y->data, y->suit);
 					}else if(n == (i - 1)){
 						y = tail;
@@ -188,7 +188,7 @@ class doublyLinkedList{
 						}else{
 							p = 0 + (rand() % (i-1));
 						}
-						cout<<"This is p: "<<p<<"\n";
+						
 						insertatpos(p, y->data, y->suit);
 					}else{
 						node* x = head;
@@ -210,7 +210,7 @@ class doublyLinkedList{
 						}else{
 							p = 0 + (rand() % (i-1));
 						}
-						cout<<"This is p: "<<p<<"\n";
+						
 						insertatpos(p, y->data, y->suit);
 					}
 				}else{
@@ -294,16 +294,15 @@ class stack{
 				if(ind == -1){
 					throw invalid_argument("There is nothing to remove from the stack!");
 				}else{
-					cout<<"Getting the head of the stack\n";
+					
 					node* s = Stack.returnHead();
-					cout<<"Got the head!\n";
-					cout<<ind<<" is ind\n";
+					
 					if(ind == 0){
 						ind = -1;
 					}else{
 						ind--;
 					}
-					cout<<"Returning s\n";
+					
 					return s;
 				}
 			}
@@ -401,9 +400,9 @@ class deck{
 			if(nodeCounter == 0){
 				throw invalid_argument("A deck has not been initiated!");
 			}else if(dealCounter < maxCards){
-				cout<<"poping\n";
+				
 				node* card = d.pop();
-				cout<<"popped!\n";
+				
 				nodeCounter--;
 				dealCounter++;
 				return card;
