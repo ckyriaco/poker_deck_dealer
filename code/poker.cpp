@@ -45,9 +45,10 @@ class node{
 //doubly linked list class
 
 class doublyLinkedList{
-	node* head;
-	node* tail;
-	int i;
+	private:
+		node* head;
+		node* tail;
+		int i;
 	public:
 		//constructor for doubly linked list object initialization
 
@@ -280,9 +281,10 @@ class doublyLinkedList{
 };
 
 class stack{
-	doublyLinkedList Stack;
-	node* stackPointer;
-	int ind;
+	private:
+		doublyLinkedList Stack;
+		node* stackPointer;
+		int ind;
 		public:
 			
 			
@@ -343,45 +345,45 @@ class stack{
 
 
 class deck{
-
-	struct card{
-		int face;
-		string suit;
-	};
-    stack d;
-    int maxCards = 52;
-	int cardsInSuites = 13;
-	int nodeCounter = 0;
-	int dealCounter = 0;
-	struct card suites[52] = {
-								{1, "hearts"}, {2, "hearts"},
-								{3, "hearts"}, {4, "hearts"},
-								{5, "hearts"}, {6, "hearts"},
-								{7, "hearts"}, {8, "hearts"},
-								{9, "hearts"}, {10, "hearts"},
-								{11, "hearts"}, {12, "hearts"},
-								{13, "hearts"},{1, "spades"},
-								{2, "spades"}, {3, "spades"},
-								{4, "spades"}, {5, "spades"},
-								{6, "spades"},{7, "spades"},
-								{8, "spades"},{9, "spades"},
-								{10, "spades"},{11, "spades"},
-								{12, "spades"},{13, "spades"},
-								{1, "clubs"}, {2, "clubs"},
-								{3, "clubs"}, {4, "clubs"},
-								{5, "clubs"}, {6, "clubs"},
-								{7, "clubs"}, {8, "clubs"},
-								{9, "clubs"}, {10, "clubs"},
-								{11, "clubs"}, {12, "clubs"},
-								{13, "clubs"},{1, "diamonds"},
-								{2, "diamonds"}, {3,  "diamonds"},
-								{4, "diamonds"},{5,  "diamonds"},
-								{6, "clubs"},{7, "clubs"},
-								{8, "clubs"}, {9, "clubs"},
-								{10, "clubs"}, {11, "clubs"},
-								{12, "clubs"}, {13, "clubs"}
+	private:
+		struct card{
+			int face;
+			string suit;
+		};
+		stack d;
+		int maxCards = 52;
+		int cardsInSuites = 13;
+		int nodeCounter = 0;
+		int dealCounter = 0;
+		struct card suites[52] = {
+									{1, "hearts"}, {2, "hearts"},
+									{3, "hearts"}, {4, "hearts"},
+									{5, "hearts"}, {6, "hearts"},
+									{7, "hearts"}, {8, "hearts"},
+									{9, "hearts"}, {10, "hearts"},
+									{11, "hearts"}, {12, "hearts"},
+									{13, "hearts"},{1, "spades"},
+									{2, "spades"}, {3, "spades"},
+									{4, "spades"}, {5, "spades"},
+									{6, "spades"},{7, "spades"},
+									{8, "spades"},{9, "spades"},
+									{10, "spades"},{11, "spades"},
+									{12, "spades"},{13, "spades"},
+									{1, "clubs"}, {2, "clubs"},
+									{3, "clubs"}, {4, "clubs"},
+									{5, "clubs"}, {6, "clubs"},
+									{7, "clubs"}, {8, "clubs"},
+									{9, "clubs"}, {10, "clubs"},
+									{11, "clubs"}, {12, "clubs"},
+									{13, "clubs"},{1, "diamonds"},
+									{2, "diamonds"}, {3,  "diamonds"},
+									{4, "diamonds"},{5,  "diamonds"},
+									{6, "clubs"},{7, "clubs"},
+									{8, "clubs"}, {9, "clubs"},
+									{10, "clubs"}, {11, "clubs"},
+									{12, "clubs"}, {13, "clubs"}
 															
-	};
+		};
     public:
 		//Constructor
 
@@ -498,11 +500,11 @@ void askForCard(){
 
 int main(){
 	string deal;
-	cout << "Enter any key (except for just enter) to use the card shuffler and dealer program or N to exit the program: ";
+	cout << "\nEnter any key (except for just enter) to use the card shuffler and dealer program or N to exit the program: ";
 	cin >> deal;
 	while(deal != "N"){
 		askForCard();
-		cout << "Enter any key (except for just enter) to use the card shuffler and dealer program or N to exit the program: ";
+		cout << "\nEnter any key (except for just enter) to use the card shuffler and dealer program or N to exit the program: ";
 		cin >> deal;
 	}
 	return 0;
