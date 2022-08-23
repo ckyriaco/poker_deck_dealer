@@ -56,8 +56,14 @@ class doublyLinkedList{
 			tail=NULL;
 			i = 0;
 		}
+		node* get_head(){
+			return head;
+		}
+		node* get_tail(){
+			return tail;
+		}
 		//insert at the beginning of the doubly linked list
-
+		
 		void insert_at_head(int value, string s){
 			node* n = new node(value, s);
 			n->next=head;
@@ -272,13 +278,14 @@ class doublyLinkedList{
 
 class stack{
 	doublyLinkedList Stack;
+	node* stackPointer;
 		public:
 			
 			int ind;
 			//constructor
 
 			stack(){
-				
+				stackPointer = Stack.get_head();
 				ind = -1;
 			}
 			//Add a value to the top of the stack
@@ -286,6 +293,7 @@ class stack{
 			void push(int data, string s){
 				Stack.insert_at_head(data, s);
 				ind++;
+				stackPointer = Stack.get_head();
 			
 			}
 			//remove a value from the top of the stack and return the value.
@@ -302,7 +310,7 @@ class stack{
 					}else{
 						ind--;
 					}
-					
+					stackPointer = Stack.get_head();
 					return s;
 				}
 			}
@@ -310,6 +318,7 @@ class stack{
 
 			void sort(){
 				Stack.sortNode();
+				stackPointer = Stack.get_head();
 			}
 
 			//Display the stack.
