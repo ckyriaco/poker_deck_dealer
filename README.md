@@ -18,7 +18,7 @@ A C++ program that shuffles and deals poker cards.
 - [X] Simply navigate to the folder and type ./poker and it will execute
 
 ## Comile and execute a new executable built on poker.cpp
-- [X] First: Ensure that GNU's g++ capable compiler is installed
+- [X] First: Ensure that GNU's g++ compiler is installed
 - [X] Second: Type command g++ poker.cpp -o nameOfExecutable
 - [X] Lastly: Type ./nameOfExecutable
 
