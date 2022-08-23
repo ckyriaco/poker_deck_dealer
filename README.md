@@ -22,3 +22,6 @@ A C++ program that shuffles and deals poker cards.
 - Second: Type command g++ poker.cpp -o nameOfExecutable
 - Lastly: Type ./nameOfExecutable
 
+- Example:
+  - % g++ poker.cpp -o poker
+  - % ./poker
