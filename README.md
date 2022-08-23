@@ -1,4 +1,4 @@
-# poker_deck_appian
+# poker_deck_dealer
 A C++ program that shuffles and deals poker cards.
 # Contents of the code folder:
 ## poker.cpp:
