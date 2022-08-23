@@ -23,5 +23,5 @@ A C++ program that shuffles and deals poker cards.
 - Lastly: Type ./nameOfExecutable
 
 - Example:
-  - % g++ poker.cpp -o poker
-  - % ./poker
+  ~ % g++ poker.cpp -o poker
+  ~ % ./poker
