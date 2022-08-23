@@ -62,6 +62,9 @@ class doublyLinkedList{
 		node* get_tail(){
 			return tail;
 		}
+		int getI(){
+			return i;
+		}
 		//insert at the beginning of the doubly linked list
 		
 		void insert_at_head(int value, string s){
@@ -279,14 +282,18 @@ class doublyLinkedList{
 class stack{
 	doublyLinkedList Stack;
 	node* stackPointer;
+	int ind;
 		public:
 			
-			int ind;
+			
 			//constructor
 
 			stack(){
 				stackPointer = Stack.get_head();
 				ind = -1;
+			}
+			int getInd(){
+				return ind;
 			}
 			//Add a value to the top of the stack
 
@@ -337,10 +344,10 @@ class deck{
 	};
     stack d;
     int maxCards = 52;
-	int cardsInSuits = 13;
+	int cardsInSuites = 13;
 	int nodeCounter = 0;
 	int dealCounter = 0;
-	struct card suits[52] = {
+	struct card suites[52] = {
 								{1, "hearts"}, {2, "hearts"},
 								{3, "hearts"}, {4, "hearts"},
 								{5, "hearts"}, {6, "hearts"},
@@ -377,13 +384,30 @@ class deck{
 			makeDeckNode();
 			
         }
+
+		stack get_deck(){
+			return d;
+		}
 		
+		int get_cardsInSuites(){
+			return cardsInSuites;
+		}
 
 		int getDealCounter(){
 			return dealCounter;
 		}
+		int getNodeCounter(){
+			return nodeCounter;
+		}
 		int getMaxCards(){
 			return maxCards;
+		}
+		struct card * getSuites(){
+			struct card temp[52];
+			for(int i = 0; i < maxCards; i++){
+				temp[i] = suites[i];
+			}
+			return temp;
 		}
 		//This function creates a doubly linked-list that represents the card deck to be used.
 		
@@ -391,7 +415,7 @@ class deck{
 			int suitCounter = 0;
 			int count = 0;
             for(int i = 0; i < 52; i++){
-				d.push(suits[i].face, suits[i].suit);
+				d.push(suites[i].face, suites[i].suit);
 				nodeCounter++;
 			}
 			d.display();
