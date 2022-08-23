@@ -295,6 +295,12 @@ class stack{
 			int getInd(){
 				return ind;
 			}
+			node* getStackPointer(){
+				return stackPointer;
+			}
+			doublyLinkedList getStack(){
+				return Stack;
+			}
 			//Add a value to the top of the stack
 
 			void push(int data, string s){
@@ -485,7 +491,7 @@ void askForCard(){
 			cin >> deal;
 		}
 	}
-	cout<<"All cards have been dealt... Goodbye!!!";
+	cout<<"\nAll cards have been dealt... Goodbye!!!";
 }
 
 //Main method executes the program until user initiates exit protocol (Enters N)
