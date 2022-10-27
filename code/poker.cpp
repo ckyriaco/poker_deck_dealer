@@ -28,7 +28,7 @@ using namespace std;
 class node{
 	public:
 		int data;
-        string suit;
+                string suit;
 		node* next;
 		node* prev;
 
