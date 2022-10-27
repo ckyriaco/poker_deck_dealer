@@ -37,7 +37,7 @@ class node{
 		node(int value, string s){
 			prev=NULL;
 			data=value;
-            suit = s;
+                        suit = s;
 			next=NULL;
 		}
 };
