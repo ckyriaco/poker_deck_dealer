@@ -1,4 +1,4 @@
-# poker_deck_dealer - Appian Interview Technical Chanllenge 2022
+# poker_deck_dealer - Appian Interview Technical Challenge 2022
 A C++ program that shuffles and deals poker cards.
 # Contents of the code folder:
 ## poker.cpp:
